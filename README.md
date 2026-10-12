@@ -1,16 +1,97 @@
-# React + Vite
+# MovieBox — Movie Discovery Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+MovieBox is a responsive movie discovery web application built with React and Vite. It allows users to search for movies and television series, view movie details, filter results by genre, and manage a personal watchlist.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Movie information is retrieved from the OMDb API through a server-side API endpoint.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Search for movies and television series.
+- Browse movies and TV shows on separate pages.
+- View movie details, including plot information.
+- Filter search results by genre.
+- Add and remove movies from a personal watchlist.
+- Save watchlist data in browser localStorage.
+- Responsive interface for desktop and mobile devices.
+- Loading, empty-result, and API-error handling.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript and JSX
+- Material UI
+- React Router
+- OMDb REST API
+- Node.js
+- Git and GitHub
+- Vercel
+- Browser localStorage
+
+## Live Demo
+
+**Live Website:** https://movie-discovery-liard.vercel.app/
+
+**GitHub Repository:** https://github.com/collinstwiine12-commits/movie-discovery
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/collinstwiine12-commits/movie-discovery.git
+   ```
+
+2. Enter the project directory:
+
+   ```bash
+   cd movie-discovery
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Create a `.env` file in the project root and add your OMDb API key:
+
+   ```env
+   OMDB_API_KEY=your_omdb_api_key
+   ```
+
+5. Start the local Express API server:
+
+   ```bash
+   npm run server
+   ```
+
+6. In a second terminal, start the Vite development server:
+
+   ```bash
+   npm run dev
+   ```
+
+7. Open the local URL displayed by Vite in your browser.
+
+## API Configuration
+
+The OMDb API key is stored in an environment variable and used by the server-side API endpoint. It must not be committed to the repository or exposed in client-side code.
+
+For Vercel deployment, configure `OMDB_API_KEY` in the project's Environment Variables settings.
+
+## Screenshots
+
+### Home Page
+
+![MovieBox Home Page](screenshots/home-page.png)
+
+### Movie Details
+
+![MovieBox Movie Details](screenshots/movie-details.png)
+
+## Author
+
+Developed as a Web and Mobile Application Development assignment.
