@@ -44,7 +44,9 @@ import {
 } from "react-router-dom";
 
 // Local development server. Keep your API key on the Express server.
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api/omdb";
+const API_URL = import.meta.env.DEV
+  ? "http://localhost:5000/api/omdb"
+  : "/api/omdb";
 
 function MovieDiscovery() {
   const location = useLocation();
